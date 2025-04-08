@@ -25,14 +25,11 @@ import {
   MdOutlineVideoLibrary,
   MdOutlineFeaturedPlayList
 } from "react-icons/md";
-import { LiaBalanceScaleRightSolid } from "react-icons/lia";
+import { LiaBalanceScaleRightSolid, LiaPiggyBankSolid } from "react-icons/lia";
 import { UserRole } from "@/types/User";
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
-import { FaCoins } from "react-icons/fa6";
-import { FaBook } from "react-icons/fa";
-import { IoTicketSharp } from "react-icons/io5";
 
 export interface MenuType {
   key: string;
@@ -56,87 +53,13 @@ export default function getMenus(): MenuType[] {
       canAccess: true,
     },
     {
-      key: "admin-users",
-      baseUrl: "/admin-users",
-      label: "Admin Users",
-      icon: <FaUserTie />,
+      key: "Banks",
+      baseUrl: "/banks",
+      label: "Banks",
+      icon: <LiaPiggyBankSolid />,
       canAccess: true,
     },
-    
-    {
-      key: "app-settings",
-      baseUrl: "/app-settings",
-      label: "App Settings",
-      icon: <MdAppSettingsAlt />,
-      canAccess: true,
-      subMenus: [
-        {
-          key: "story",
-          baseUrl: "/app-settings/story",
-          label: "Story",
-          icon: <FaBook />,
-          canAccess: true,
-          
-        },
-        {
-          key: "academy",
-          baseUrl: "/app-settings/academy",
-          label: "Academy",
-          icon: <MdOutlineVideoLibrary />,
-          canAccess: true,
-          
-        },
-        {
-          key: "coin",
-          baseUrl: "/app-settings/coin",
-          label: "Coin",
-          icon: <FaCoins />,
-          canAccess: true,
-          
-        },
-        {
-          key: "ticket",
-          baseUrl: "/app-settings/ticket",
-          label: "Ticket",
-          icon: <IoTicketSharp />,
 
-          canAccess: true,
-          
-        },
-        {
-          key: "slider",
-          baseUrl: "/app-settings/slider",
-          label: "Slider",
-          pageTitle: "Slider settings",
-          icon: <MdOutlineFeaturedPlayList />,
-          canAccess: true,
-        },
-        {
-          key: "faq",
-          baseUrl: "/app-settings/faq",
-          label: "FAQ",
-          pageTitle: "FAQ settings",
-          icon: <FaQ />,
-          canAccess: false,
-        },
-        {
-          key: "terms",
-          baseUrl: "/app-settings/terms",
-          label: "Terms & Conditions",
-          pageTitle: "T&C settings",
-          icon: <LiaBalanceScaleRightSolid />,
-          canAccess: false,
-        },
-        {
-          key: "policy",
-          baseUrl: "/app-settings/policy",
-          label: "Privacy Policy",
-          pageTitle: "Privacy Policy settings",
-          icon: <MdOutlinePrivacyTip />,
-          canAccess: false,
-        },
-      ],
-    },
     
   ];
 }
