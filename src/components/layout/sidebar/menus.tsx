@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { BsWrenchAdjustable } from "react-icons/bs";
+import { BsWallet, BsWrenchAdjustable } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
 import { GiProfit } from "react-icons/gi";
 import { GrTransaction, GrUserFemale } from "react-icons/gr";
@@ -57,6 +57,14 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/banks",
       label: "Banks",
       icon: <LiaPiggyBankSolid />,
+      canAccess: true,
+    },
+
+    {
+      key: "Wallets",
+      baseUrl: "/wallets",
+      label: "Wallets",
+      icon: <BsWallet />,
       canAccess: true,
     },
 
