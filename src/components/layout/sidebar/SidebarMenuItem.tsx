@@ -9,7 +9,7 @@ const SidebarMenuItem = ({ menu }: { menu: MenuType }) => {
   const pathname = usePathname();
 
   if (menu.subMenus == undefined || menu.subMenus.length == 0)
-    return <MenuItemBuilder menu={menu} />;http://localhost:3000/admin-users
+    return <MenuItemBuilder menu={menu} />;
 
   return (
     <SubMenu

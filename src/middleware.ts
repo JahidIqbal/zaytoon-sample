@@ -2,7 +2,7 @@ import { jwtDecode } from "jwt-decode";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const GuestRoutes = ["/dashboard", "/forgot-password", "/reset-password"];
+const GuestRoutes = ["/login","/dashboard", "/admin-users","/forgot-password", "/reset-password"];
 
 export function middleware(request: NextRequest) {
 

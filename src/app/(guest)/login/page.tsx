@@ -1,6 +1,7 @@
 import React from "react";
 import CredentialsInput from "./components/CredentialsInput";
 import Footer from "@/components/footer/Footer";
+import Image from "next/image";
 
 const page: React.FC = () => {
   return (
@@ -8,9 +9,13 @@ const page: React.FC = () => {
       <div className="flex justify-evenly items-center">
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2 items-center">
-            <p className="text-4xl flex justify-center items-center poppins font-semibold mb-8">
-              Admin Log In
-            </p>
+          <Image
+            className="mt-4 max-w-full h-auto"
+            src="/logo.png"
+            alt="logo"
+            width={140}
+            height={150}
+          />
           </div>
           <CredentialsInput />
         </div>
