@@ -1,0 +1,48 @@
+FROM node:20-alpine AS base
+
+ENV NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production \
+    PORT=3000
+
+RUN apk add --no-cache libc6-compat
+
+WORKDIR /app
+
+FROM base AS deps
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+
+RUN \
+  if [ -f yarn.lock ]; then yarn install --production  --legacy-peer-deps && yarn cache clean; \
+  elif [ -f package-lock.json ]; then npm install --legacy-peer-deps && npm cache clean --force; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm install --prod --legacy-peer-deps && pnpm store prune; \
+  else echo "No lockfile found." && exit 1; \
+  fi
+
+
+FROM base AS builder
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+RUN mkdir -p public && \
+  if [ -f yarn.lock ]; then yarn build; \
+  elif [ -f package-lock.json ]; then npm run build; \
+  fi
+
+
+FROM base AS runner
+WORKDIR /app
+
+
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/.next/standalone ./
+
+RUN addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 nextjs
+
+USER nextjs
+
+EXPOSE 3000
+ENV PORT 3000
+
+CMD ["node", "server.js"]
