@@ -45,7 +45,7 @@ const Sidebar: React.FC = () => {
                 fontWeight: active ? "600" : "400",
               }),
               button: ({ active }) => ({
-                backgroundColor: active ? "#000000" : "#000000", 
+                 backgroundColor: active ? "#333333" : "#000000",
                 color: "#ffffff", 
                 ":hover": {
                   backgroundColor: active ? "#808080" : "#808080", 

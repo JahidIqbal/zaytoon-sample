@@ -60,24 +60,14 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/admin-users",
       label: "Admin Users",
       icon: <FaUserTie />,
-      // canAccess: user.role == UserRole.ADMIN,
       canAccess: true,
     },
     
-    // {
-    //   key: "accounts",
-    //   baseUrl: "/accounts",
-    //   label: "Accounts",
-    //   icon: <MdOutlineSupervisorAccount />,
-    //   // canAccess: user.role == UserRole.ADMIN,
-    //   canAccess: true,
-    // },
     {
       key: "app-settings",
       baseUrl: "/app-settings",
       label: "App Settings",
       icon: <MdAppSettingsAlt />,
-      // canAccess: user.role == UserRole.ADMIN ,
       canAccess: true,
       subMenus: [
         {
@@ -85,7 +75,6 @@ export default function getMenus(): MenuType[] {
           baseUrl: "/app-settings/story",
           label: "Story",
           icon: <FaBook />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: true,
           
         },
@@ -94,7 +83,6 @@ export default function getMenus(): MenuType[] {
           baseUrl: "/app-settings/academy",
           label: "Academy",
           icon: <MdOutlineVideoLibrary />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: true,
           
         },
@@ -103,7 +91,6 @@ export default function getMenus(): MenuType[] {
           baseUrl: "/app-settings/coin",
           label: "Coin",
           icon: <FaCoins />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: true,
           
         },
@@ -112,7 +99,7 @@ export default function getMenus(): MenuType[] {
           baseUrl: "/app-settings/ticket",
           label: "Ticket",
           icon: <IoTicketSharp />,
-          // canAccess: user.role == UserRole.ADMIN,
+
           canAccess: true,
           
         },
@@ -122,7 +109,6 @@ export default function getMenus(): MenuType[] {
           label: "Slider",
           pageTitle: "Slider settings",
           icon: <MdOutlineFeaturedPlayList />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: true,
         },
         {
@@ -131,7 +117,6 @@ export default function getMenus(): MenuType[] {
           label: "FAQ",
           pageTitle: "FAQ settings",
           icon: <FaQ />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: false,
         },
         {
@@ -140,7 +125,6 @@ export default function getMenus(): MenuType[] {
           label: "Terms & Conditions",
           pageTitle: "T&C settings",
           icon: <LiaBalanceScaleRightSolid />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: false,
         },
         {
@@ -149,29 +133,11 @@ export default function getMenus(): MenuType[] {
           label: "Privacy Policy",
           pageTitle: "Privacy Policy settings",
           icon: <MdOutlinePrivacyTip />,
-          // canAccess: user.role == UserRole.ADMIN,
           canAccess: false,
         },
       ],
     },
-    // {
-    //   key: "reports",
-    //   baseUrl: "/reports",
-    //   label: "Reports",
-    //   icon: <TbReportAnalytics />,
-    //   // canAccess: user.role == UserRole.ADMIN,
-    //   canAccess: true,
-    //   subMenus: [
-    //     {
-    //       key: "user-acquisition",
-    //       baseUrl: "/reports/user-acquisition",
-    //       label: "User Acquisition",
-    //       icon: <PiUserListBold />,
-    //       // canAccess: user.role == UserRole.ADMIN ,
-    //       canAccess: true,
-    //     },
-    //   ],
-    // },
+    
   ];
 }
 

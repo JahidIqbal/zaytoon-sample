@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="flex gap-4 items-center">
           <div>
             <h1 className="text-primary-text flex justify-end font-bold text-white">
-            User
+            Zaytoon
             </h1>
            
           </div>
