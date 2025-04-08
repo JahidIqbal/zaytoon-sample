@@ -35,13 +35,13 @@ async function TransactionDistribution() {
     <div className="w-full flex gap-4">
       <div className="w-full">
         <TransactionByType
-          title="Top Books Purchase Count"
+          title="Top Purchase Count"
           transactionTypes={customerTransactions.transactionvolume}
         />
       </div>
       <div className="w-full">
         <TransactionByType
-          title="Top Book Purchase Volume"
+          title="Top Purchase Volume"
           transactionTypes={merchantTransactions.transactionvolume}
           isMerchant={true}
         />
