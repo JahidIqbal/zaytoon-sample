@@ -1,32 +1,9 @@
 "use client";
 
 import { ReactNode } from "react";
-import { BsWallet, BsWrenchAdjustable } from "react-icons/bs";
+import { BsShieldCheck, BsWallet } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
-import { GiProfit } from "react-icons/gi";
-import { GrTransaction, GrUserFemale } from "react-icons/gr";
-import { FaUserTie, FaSearchDollar, FaDonate } from "react-icons/fa";
-import { FaMoneyBillTransfer, FaQ } from "react-icons/fa6";
-import { PiUserListBold } from "react-icons/pi";
-import {
-  TbCashRegister,
-  TbReportAnalytics,
-  TbReportMoney,
-} from "react-icons/tb";
-import {
-  MdAccountBalanceWallet,
-  MdAccountTree,
-  MdAddBusiness,
-  MdAppSettingsAlt,
-  MdOutlinePrivacyTip,
-  MdOutlineSupervisorAccount,
-  MdSlideshow,
-  MdSystemSecurityUpdate,
-  MdOutlineVideoLibrary,
-  MdOutlineFeaturedPlayList
-} from "react-icons/md";
-import { LiaBalanceScaleRightSolid, LiaPiggyBankSolid } from "react-icons/lia";
-import { UserRole } from "@/types/User";
+import {LiaPiggyBankSolid } from "react-icons/lia";
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
@@ -65,6 +42,13 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/wallets",
       label: "Wallets",
       icon: <BsWallet />,
+      canAccess: true,
+    },
+    {
+      key: "Insurance",
+      baseUrl: "/insurance",
+      label: "Insurance",
+      icon: <BsShieldCheck />,
       canAccess: true,
     },
 
