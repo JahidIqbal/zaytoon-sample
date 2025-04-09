@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-black w-[233px]">
       <Button
         className="md:hidden absolute z-20 top-0"
         variant="light"
@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
         onBackdropClick={handleToggle}
         className="pt-6 px-4 overflow-y-hidden"
       >
-        <div className="flex flex-col justify-between bg-black">
+        <div className="flex flex-col justify-between ">
           <Menu
             className="gap-4 "
             menuItemStyles={{

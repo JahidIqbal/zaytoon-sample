@@ -29,23 +29,30 @@ const LoginLayout: React.FC<LoginLayoutProps> = (props) => {
   }, [isUserNotLogged]);
 
   return (
-    <div className="flex h-screen bg-black">
-      <div className="sticky top-0 h-screen ">
-        <div className="flex justify-center">
-          <Image className="mt-4 max-w-full h-auto" src="/logo.png" alt="logo" width={140} height={150} />
+    <div className="bg-black">
+      <div className="flex h-screen">
+        <div className="sticky top-0">
+          <div className="flex justify-center ">
+            <Image
+              className="mt-4 w-[50%] h-auto"
+              src="/logo.png"
+              alt="logo"
+              width={140}
+              height={150}
+            />
+          </div>
+          <Sidebar />
         </div>
-        <Sidebar/>
+        <div className="flex flex-col w-full bg-black">
+          <div className="sticky top-0 z-10">
+            <NextTopLoader color="#4169E1" showSpinner={false} />
+            <Navbar />
+          </div>
+          <div className="h-full w-full bg-[#F4F4F4] overflow-y-auto">
+            {props.children}
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col w-full">
-        <div className="sticky top-0 z-10">
-          <NextTopLoader color="#4169E1" showSpinner={false} />
-          <Navbar />
-        </div>
-        <div className="h-full w-full bg-[#F4F4F4] overflow-y-auto">
-          {props.children}
-        </div>
-      </div>
-   
     </div>
   );
 };
