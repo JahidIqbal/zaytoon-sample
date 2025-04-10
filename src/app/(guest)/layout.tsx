@@ -10,7 +10,7 @@ const LoginLayout: React.FC<LoginLayoutProps> = (props) => {
   return (
     <>
       <div className="h-screen flex justify-center items-center">
-        <div className=" bg-background-primary flex flex-row-reverse justify-center items-center w-full  rounded-2xl">
+        <div className=" bg-gray-100 flex flex-row-reverse justify-center items-center w-full  rounded-2xl">
           <div className="rounded bg-no-repeat bg-cover flex items-center justify-center">
             {props.children}
           </div>
