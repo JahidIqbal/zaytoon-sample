@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-black w-[233px]">
+    <div className="bg-black w-[249px]">
       <Button
         className="md:hidden absolute z-20 top-0"
         variant="light"
