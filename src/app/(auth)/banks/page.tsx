@@ -6,7 +6,7 @@ const Page = async (props: PageProp) => {
   
   return (
     <div>
-      <div className="flex justify-between items-center ml-4">
+      <div className="flex justify-between items-center">
         <div className="flex flex-col mt-6">
           <BankImages />
         </div>

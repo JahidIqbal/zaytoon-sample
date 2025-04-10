@@ -10,7 +10,7 @@ const WalletImages = () => {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-8 md:px-16 lg:px-32">
+    <div className="py-12 px-8">
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {cards.map((card, index) => (
           <div
