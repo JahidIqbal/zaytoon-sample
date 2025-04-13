@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { BsShieldCheck, BsWallet } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
-import {LiaExchangeAltSolid, LiaFileAlt, LiaLightbulbSolid, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid } from "react-icons/lia";
+import {LiaCarAltSolid, LiaExchangeAltSolid, LiaFileAlt, LiaFileMedicalSolid, LiaHospitalAltSolid, LiaLightbulbSolid, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid, LiaTrainSolid } from "react-icons/lia";
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
@@ -64,6 +64,20 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/insurance",
       label: "Insurance",
       icon: <BsShieldCheck />,
+      canAccess: true,
+    },
+    {
+      key: "Travel Services",
+      baseUrl: "/travel-services",
+      label: "Travel Services",
+      icon: <LiaTrainSolid />,
+      canAccess: true,
+    },
+    {
+      key: "Medical Services",
+      baseUrl: "/medical-services",
+      label: "Medical Services",
+      icon: <LiaHospitalAltSolid />,
       canAccess: true,
     },
     
