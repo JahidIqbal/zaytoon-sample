@@ -15,7 +15,7 @@ const PrimaryBtn: React.FC<Props> = ({ disabled, loading, content }) => {
         "flex justify-center text-white py-2 px-6 rounded-lg font-bold",
         {
           "bg-gradient-to-tr from-disabled-start to-disabled-end cursor-not-allowed": disabled || loading,
-          "bg-gradient-to-tr from-purple-start to-purple-end": !disabled && !loading,
+          " bg-gradient-to-r from-[#7eb456] to-[#7eb456]": !disabled && !loading,
         }
       )}
     >
