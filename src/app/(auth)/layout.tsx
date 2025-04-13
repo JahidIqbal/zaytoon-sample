@@ -32,9 +32,9 @@ const LoginLayout: React.FC<LoginLayoutProps> = (props) => {
     <div className="bg-black">
       <div className="flex h-screen">
         <div className="sticky top-0">
-          <div className="flex justify-center ">
+          <div className="flex justify-center items-center ">
             <Image
-              className="mt-4 w-[50%] h-auto"
+              className="mt-4 w-[65%] h-auto"
               src="/logo.png"
               alt="logo"
               width={140}
