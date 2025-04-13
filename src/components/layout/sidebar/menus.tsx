@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { BsShieldCheck, BsWallet } from "react-icons/bs";
+import { BsBuilding, BsShieldCheck, BsWallet } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
 import {LiaCarAltSolid, LiaExchangeAltSolid, LiaFileAlt, LiaFileMedicalSolid, LiaHospitalAltSolid, LiaLightbulbSolid, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid, LiaTrainSolid } from "react-icons/lia";
 import { getLoggedUser } from "@/services/LoggedUserClient";
@@ -78,6 +78,14 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/medical-services",
       label: "Medical Services",
       icon: <LiaHospitalAltSolid />,
+      canAccess: true,
+    },
+
+    {
+      key: "Government Services",
+      baseUrl: "/government-services",
+      label: "Government Services",
+      icon: <BsBuilding />,
       canAccess: true,
     },
     

@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="bg-black w-[249px]">
+    <div className="bg-black w-[310px]">
       <Button
         className="md:hidden absolute z-20 top-0"
         variant="light"
@@ -29,6 +29,7 @@ const Sidebar: React.FC = () => {
         breakPoint="sm"
         collapsed={expend}
         onBackdropClick={handleToggle}
+        width={"315px"}
         className="pt-6 px-4 overflow-y-hidden"
       >
         <div className="flex flex-col justify-between ">
