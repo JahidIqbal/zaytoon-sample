@@ -3,10 +3,11 @@
 import { ReactNode } from "react";
 import { BsShieldCheck, BsWallet } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
-import {LiaPiggyBankSolid } from "react-icons/lia";
+import {LiaExchangeAltSolid, LiaFileAlt, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid } from "react-icons/lia";
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
+
 
 export interface MenuType {
   key: string;
@@ -36,12 +37,19 @@ export default function getMenus(): MenuType[] {
       icon: <LiaPiggyBankSolid />,
       canAccess: true,
     },
-
     {
       key: "Wallets",
       baseUrl: "/wallets",
       label: "Wallets",
       icon: <BsWallet />,
+      canAccess: true,
+    },
+
+    {
+      key: "MFS",
+      baseUrl: "/mfs",
+      label: "MFS",
+      icon: <LiaMobileSolid />,
       canAccess: true,
     },
     {
@@ -51,7 +59,6 @@ export default function getMenus(): MenuType[] {
       icon: <BsShieldCheck />,
       canAccess: true,
     },
-
     
   ];
 }
