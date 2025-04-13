@@ -1,26 +1,26 @@
-import { FaFilePen } from "react-icons/fa6";
+import { LiaFileAlt } from "react-icons/lia";
 
-const SocialSafetyNetcard = () => {
+const Governmentservicescard = () => {
   const cards = [
     {
-      icon: FaFilePen,
+      icon: LiaFileAlt,
       alt: "pen Logo",
-      title:'NID Service'
+      title:'Birth Registration'
     },
     {
-      icon: FaFilePen,
-      alt: "pen Logo",
-      title:'Drivers License'
+      icon: LiaFileAlt,
+      alt: "Birth certificate Logo",
+      title:'Birth Certificate Correction'
     },
     {
-      icon: FaFilePen,
-      alt: "pen Logo",
-       title:'Government Bill Payment'
+      icon: LiaFileAlt,
+      alt: "Death Logo",
+       title:'Birth/Death Verification'
     },
     {
-      icon: FaFilePen,
+      icon: LiaFileAlt,
       alt: "pen Logo",
-      title:'Passport Application'
+      title:'Birth/Death Verification'
     },
     
   ];
@@ -36,7 +36,7 @@ const SocialSafetyNetcard = () => {
               className="bg-white shadow-md rounded-lg p-6 flex flex-col justify-center items-center h-[165px] "
             >
               <Icon className="text-4xl mb-2" aria-label={card.alt} />
-              <h1 className="text-center font-medium">{card.title}</h1>
+              <h1 className="text-center font-medium uppercase">{card.title}</h1>
             </div>
           );
         })}
@@ -45,4 +45,4 @@ const SocialSafetyNetcard = () => {
   );
 };
 
-export default SocialSafetyNetcard;
+export default Governmentservicescard;

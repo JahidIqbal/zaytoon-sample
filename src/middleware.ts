@@ -2,7 +2,23 @@ import { jwtDecode } from "jwt-decode";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const GuestRoutes = ["/login","/insurance","/dashboard", "/banks","/wallets","/mfs","/utilities","/travel-services","/government-services","/medical-services","/forgot-password", "/reset-password"];
+const GuestRoutes = [
+  "/login",
+  "/insurance",
+  "/dashboard", 
+  "/banks",
+  "/wallets",
+  "/mfs",
+  "/utilities",
+  "/travel-services",
+  "/government-services",
+  "/medical-services",
+  "/social-safety-net",
+  "/land-services",
+  "/transactions",
+  "/forgot-password", 
+  "/reset-password"
+];
 
 export function middleware(request: NextRequest) {
 

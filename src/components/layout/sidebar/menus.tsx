@@ -7,6 +7,9 @@ import {LiaCarAltSolid, LiaExchangeAltSolid, LiaFileAlt, LiaFileMedicalSolid, Li
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
+import { GrDocument } from "react-icons/gr";
+import { MdOutlineLandslide } from "react-icons/md";
+import { FaHistory } from "react-icons/fa";
 
 
 export interface MenuType {
@@ -86,6 +89,27 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/government-services",
       label: "Government Services",
       icon: <BsBuilding />,
+      canAccess: true,
+    },
+    {
+      key: "Social safety net",
+      baseUrl: "/social-safety-net",
+      label: "Social safety Services",
+      icon: <GrDocument />,
+      canAccess: true,
+    },
+    {
+      key: "Land services",
+      baseUrl: "/land-services",
+      label: "Land services",
+      icon: <MdOutlineLandslide />,
+      canAccess: true,
+    },
+    {
+      key: "Transaction History",
+      baseUrl: "/transactions",
+      label: "Transaction History",
+      icon: <FaHistory />,
       canAccess: true,
     },
     
