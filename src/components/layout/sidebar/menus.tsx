@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { BsShieldCheck, BsWallet } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
-import {LiaExchangeAltSolid, LiaFileAlt, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid } from "react-icons/lia";
+import {LiaExchangeAltSolid, LiaFileAlt, LiaLightbulbSolid, LiaMobileSolid, LiaMoneyBillWaveSolid, LiaPiggyBankSolid, LiaSdCardSolid } from "react-icons/lia";
 import { getLoggedUser } from "@/services/LoggedUserClient";
 import { usePathname } from "next/navigation";
 import { trimChar } from "@/utils/StringUtils";
@@ -50,6 +50,13 @@ export default function getMenus(): MenuType[] {
       baseUrl: "/mfs",
       label: "MFS",
       icon: <LiaMobileSolid />,
+      canAccess: true,
+    },
+    {
+      key: "Utilities",
+      baseUrl: "/utilities",
+      label: "Utilities",
+      icon: <LiaLightbulbSolid />,
       canAccess: true,
     },
     {
