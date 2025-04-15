@@ -16,6 +16,7 @@ const GuestRoutes = [
   "/social-safety-net",
   "/land-services",
   "/transactions",
+  "/profile/change-password",
   "/forgot-password", 
   "/reset-password"
 ];

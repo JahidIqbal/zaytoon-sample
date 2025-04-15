@@ -58,7 +58,7 @@ const ChangePassword: React.FC = () => {
   return (
     <>
       <div className="min-h-screen flex items-start justify-center pt-12">
-        <form onSubmit={handlePasswordChange} method="POST" className="bg-purple-100 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <form onSubmit={handlePasswordChange} method="POST" className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
                                                     
           <div className="flex flex-col gap-4">
             <PasswordField
